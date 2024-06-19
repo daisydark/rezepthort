@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% block head %}
+        <title>{% block title %}{% endblock %} - My Webpage</title>
+
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Free HTML Templates" name="keywords">
+        <meta content="Free HTML Templates" name="description">
+
+        <!-- Favicon -->
+        <link href="img/favicon.ico" rel="icon">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Rubik&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css" rel="stylesheet">
+
+        <!-- Bootstrap Stylesheet -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+        <!-- Template Stylesheet -->
+        <link href="/css/style.css" rel="stylesheet">
+        <link href="/css/menu.css" rel="stylesheet">
+
+    {% endblock %}
+</head>
+<body>
+<!-- Topbar Start -->
+<div class="container-fluid bg-dark py-3 px-lg-5 d-none d-lg-block">
+    <div class="row">
+        <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+            <div class="d-inline-flex align-items-center">
+                <a class="text-body px-3" href="" title="Light mode"><i class="fa fa-circle mr-2"></i></a>
+                <a class="text-body pr-3" href="" title="Dark mode"><i class="fa fa-moon mr-2"></i></a>
+            </div>
+        </div>
+        <div class="col-md-6 text-center text-lg-right">
+            <div class="d-inline-flex align-items-center">
+                <a class="text-body px-3" href="">
+                    Meine Kochecke
+                </a>
+                <span class="text-body">|</span>
+                <a class="text-body pl-3" href="">
+                    Nachrichten
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Topbar End -->
+
+
+<!-- Navbar Start -->
+<div class="container-fluid position-relative nav-bar p-0">
+    <div class="position-relative px-lg-5" style="z-index: 9;">
+        <nav class="navbar navbar-expand-lg bg-secondary navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
+            <a href="" class="navbar-brand">
+                <h1 class="text-primary mb-1 text-uppercase"><i class="fab fa-twitter"></i> Rezepthort</h1>
+            </a>
+            <a class="navbar-toggler toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </a>
+            <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+
+                <nav class="navbar-nav ml-auto py-0">
+                    <ul class="menu">
+                        <li class="item has-submenu">
+                            <a class="nav-link" tabindex="0">Rezepte</a>
+                            <ul class="submenu dropdown-menu rounded-0 m-0">
+                                <li class="subitem"><a href="#">Design</a></li>
+                                <li class="subitem"><a href="#">Development</a></li>
+                                <li class="subitem"><a href="#">SEO</a></li>
+                                <li class="subitem"><a href="#">Copywriting</a></li>
+                            </ul>
+                        </li>
+                        <li class="item has-submenu">
+                            <a class="nav-link" tabindex="0">Tipps</a>
+                            <ul class="submenu dropdown-menu rounded-0 m-0">
+                                <li class="subitem"><a href="#">Design</a></li>
+                                <li class="subitem"><a href="#">Development</a></li>
+                                <li class="subitem"><a href="#">SEO</a></li>
+                                <li class="subitem"><a href="#">Copywriting</a></li>
+                            </ul>
+                        </li>
+                        <li class="item"><a class="nav-item nav-link" href="#">Kochecken</a></li>
+                        <li class="item"><a class="nav-item nav-link" href="#">Forum</a></li>
+                        <li class="item has-submenu">
+                            <a class="nav-link" tabindex="0">Mitmachen</a>
+                            <ul class="submenu dropdown-menu rounded-0 m-0">
+                                <li class="subitem"><a href="/recipe/create">Rezept einstellen</a></li>
+                                <li class="subitem"><a href="#">Development</a></li>
+                                <li class="subitem"><a href="#">SEO</a></li>
+                                <li class="subitem"><a href="#">Copywriting</a></li>
+                            </ul>
+                        </li>
+                        <li class="item"><a class="nav-item nav-link active" href="#">Hilfe</a></li>
+
+                        {# <li class="toggle"><a href="#"><i class="fas fa-bars"></i></a></li>#}
+
+                    </ul>
+                </nav>
+
+                {# <div class="navbar-nav ml-auto py-0">
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Rezepte</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="car.html" class="dropdown-item">Car Listing</a>
+                            <a href="detail.html" class="dropdown-item">Car Detail</a>
+                            <a href="booking.html" class="dropdown-item">Car Booking</a>
+                        </div>
+                    </div>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tipps</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="car.html" class="dropdown-item">Car Listing</a>
+                            <a href="detail.html" class="dropdown-item">Car Detail</a>
+                            <a href="booking.html" class="dropdown-item">Car Booking</a>
+                        </div>
+                    </div>
+                    <a href="index.html" class="nav-item nav-link">Kochecken</a>
+                    <a href="index.html" class="nav-item nav-link">Forum</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Mitmachen</a>
+                        <div class="dropdown-menu rounded-0 m-0">
+                            <a href="car.html" class="dropdown-item">Car Listing</a>
+                            <a href="detail.html" class="dropdown-item">Car Detail</a>
+                            <a href="booking.html" class="dropdown-item">Car Booking</a>
+                        </div>
+                    </div>
+                    <a href="index.html" class="nav-item nav-link active">Hilfe</a>
+                </div>#}
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Navbar End -->
+
+<!-- Search Start -->
+<div class="container-fluid bg-white pt-3 px-lg-5">
+    <div class="row mx-n2">
+        <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+            <select class="custom-select px-4 mb-3" style="height: 50px;">
+                <option>Überall</option>
+                <option value="1" selected>Rezepte</option> <!-- Je nachdem, wo man ist!!!! -->
+                <option value="2">Tipps</option>
+                <option value="2">Forum</option>
+            </select>
+        </div>
+        <!-- <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+            <div class="date mb-3" id="date" data-target-input="nearest">
+                <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date"
+                       data-target="#date" data-toggle="datetimepicker" />
+            </div>
+        </div>-->
+        <div class="col-xl-4 col-lg-8 col-md-12 px-2">
+            <div class="time mb-3">
+                <input type="text" class="form-control p-4" placeholder="Suche">
+            </div>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+            <select class="custom-select px-4 mb-3" style="height: 50px;">s
+                <option value="1">Alle Rubriken</option>
+                <option value="2">Fleischgerichte</option>
+                <option value="3">Vegetarisch</option>
+                <option value="4">Vegan</option>
+            </select>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+            <select class="custom-select px-4 mb-3" style="height: 50px;">
+                <option selected>Kategorie</option>
+                <option value="1">Hauptspeisen</option>
+                <option value="2">Beilagen</option>
+                <option value="3">Suppen</option>
+                <option value="3">...</option>
+            </select>
+        </div>
+        <div class="col-xl-2 col-lg-4 col-md-6 px-2">
+            <button class="btn btn-primary btn-block mb-3" type="submit" style="height: 50px;">Finden</button>
+        </div>
+    </div>
+</div>
+<!-- Search End -->
+
+{% block content %}{% endblock %}
+
+<!-- Footer Start -->
+<div class="container-fluid bg-secondary py-5 px-sm-3 px-md-5" style="margin-top: 90px;">
+    <div class="row pt-5">
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-light mb-4">Statistik</h4>
+            <p class="mb-2"><i class="fa fa-map-marker-alt text-white mr-3"></i>Rezepte</p>
+            <p class="mb-2"><i class="fa fa-phone-alt text-white mr-3"></i>Tipps</p>
+            <p class="mb-2"><i class="fa fa-envelope text-white mr-3"></i>Kochecken</p>
+            <p class="mb-2"><i class="fa fa-envelope text-white mr-3"></i>Forumbeiträge</p>
+            <p class="mb-2"><a class="text-body mb-2" href="#"><i class="fa fa-envelope text-white mr-3"></i>Online</a></p>
+            <p class="mb-2"><i class="fa fa-envelope text-white mr-3"></i>Besucher</p>
+            {# <h6 class="text-uppercase text-white py-2">Follow me</h6>
+            <div class="d-flex justify-content-start">
+                <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a class="btn btn-lg btn-dark btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+            </div>#}
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-light mb-4">Über rezepthort.de</h4>
+            <div class="d-flex flex-column justify-content-start">
+                <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Hilfe</a>
+                <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Kochecke Regeln</a>
+                <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Netiquette</a>
+                <a class="text-body mb-2" href="/datenschutz"><i class="fa fa-angle-right text-white mr-2"></i>Datenschutz</a>
+                <a class="text-body mb-2" href="/impressum"><i class="fa fa-angle-right text-white mr-2"></i>Impressum</a>
+                <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Kontakt</a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-light mb-4">Neueste Beiträge</h4>
+            <div class="row mx-n1">
+                <div class="col-4 px-1 mb-2">
+                    <a href=""><img class="w-100" src="img/gallery-1.jpg" alt=""></a>
+                </div>
+                <div class="col-4 px-1 mb-2">
+                    <a href=""><img class="w-100" src="img/gallery-2.jpg" alt=""></a>
+                </div>
+                <div class="col-4 px-1 mb-2">
+                    <a href=""><img class="w-100" src="img/gallery-3.jpg" alt=""></a>
+                </div>
+                <div class="col-4 px-1 mb-2">
+                    <a href=""><img class="w-100" src="img/gallery-4.jpg" alt=""></a>
+                </div>
+                <div class="col-4 px-1 mb-2">
+                    <a href=""><img class="w-100" src="img/gallery-5.jpg" alt=""></a>
+                </div>
+                <div class="col-4 px-1 mb-2">
+                    <a href=""><img class="w-100" src="img/gallery-6.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-5">
+            <h4 class="text-light mb-4">Newsletter</h4>
+            <p class="mb-4">Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+            <div class="w-100 mb-3">
+                <div class="input-group">
+                    <input type="text" class="form-control bg-dark border-dark" style="padding: 25px;" placeholder="Your Email">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary text-uppercase px-3">Anmelden</button>
+                    </div>
+                </div>
+            </div>
+            <i>Lorem sit sed elitr sed kasd et</i>
+        </div>
+    </div>
+</div>
+<div class="container-fluid bg-dark py-4 px-sm-3 px-md-5">
+    <p class="mb-2 text-center text-body">&copy; <a href="#">Your Site Name</a>. All Rights Reserved.</p>
+    <p class="m-0 text-center text-body">Designed by <a href="https://htmlcodex.com">HTML Codex</a></p>
+</div>
+<!-- Footer End -->
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>
